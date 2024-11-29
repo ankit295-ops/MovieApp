@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_light_primary"
+        android:padding="10dp"
+        tools:context=".ui.MainActivity">
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="What do you want to watch?"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTrending"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Trending"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/tvQuestion"
+            app:layout_constraintStart_toStartOf="@id/tvQuestion"
+            app:layout_constraintTop_toBottomOf="@id/tvQuestion" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTrending"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@id/tvTrending"
+            app:layout_constraintStart_toStartOf="@id/tvTrending"
+            app:layout_constraintTop_toBottomOf="@id/tvTrending" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tlCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@android:color/white"
+            app:tabIndicatorHeight="4dp"
+            app:tabMode="auto"
+            app:tabTextColor="@android:color/white"
+            android:background="@color/my_light_primary"
+            app:layout_constraintEnd_toEndOf="@id/rvTrending"
+            app:layout_constraintStart_toStartOf="@id/rvTrending"
+            app:layout_constraintTop_toBottomOf="@id/rvTrending" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/movieListViewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/tlCategory"
+            app:layout_constraintEnd_toEndOf="@id/tlCategory"
+            app:layout_constraintTop_toBottomOf="@id/tlCategory"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
