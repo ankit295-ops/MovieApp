@@ -39,3 +39,4 @@ Known issues or limitations:
 images are showing images size not supported error so default placeholder image is shown
 progress bars are not shown
 Failures are not handled
+internet connection not checked.
