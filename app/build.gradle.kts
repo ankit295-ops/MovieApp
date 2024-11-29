@@ -54,5 +54,4 @@ dependencies {
     implementation(libs.converter.gson)
     implementation(libs.picasso)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.circleimageview)
 }
